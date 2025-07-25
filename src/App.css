@@ -1,0 +1,424 @@
+
+body {
+  margin: 0;
+  font-family: 'Crimson Pro', serif;
+  background: url('./assets/images/vintage-bg.jpg') no-repeat center center fixed;
+
+  background-size: cover;
+  color: #3e2f1c;
+}
+
+.app {
+  text-align: center;
+  padding: 2rem;
+  background-color: rgba(255, 248, 220, 0.85); 
+  min-height: 100vh;
+  border: 10px solid #d6b37d;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.title {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  color: #5b3e1d;
+  margin-bottom: 0.3rem;
+  text-shadow: 1px 1px 0 #f5e1c1;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  color: #6d4c2f;
+  margin-bottom: 1.5rem;
+}
+
+.search-box input {
+  padding: 0.5rem;
+  width: 250px;
+  font-size: 1rem;
+  border: 2px solid #c2a67d;
+  border-radius: 6px;
+  background-color: #fffaf3;
+  color: #3e2f1c;
+  margin-right: 0.5rem;
+}
+
+.search-box button {
+  padding: 0.5rem 1rem;
+  background-color: #c89f72;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  box-shadow: 2px 2px 6px #aa8d6c;
+}
+
+.search-box button:hover {
+  background-color: #a97c50;
+}
+
+.recipes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.card {
+  background-color: rgba(255, 248, 230, 0.95);
+  border: 1px solid #d6b37d;
+  border-radius: 16px;
+  box-shadow: 4px 4px 10px rgba(97, 76, 56, 0.2);
+  padding: 1rem;
+  width: 250px;
+  transition: transform 0.3s ease;
+  font-family: 'Georgia', serif;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card img {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 0.8rem;
+  border: 2px solid #c89f72;
+}
+
+.card h3 {
+  font-size: 1.3rem;
+  color: #5b3e1d;
+  margin-bottom: 0.5rem;
+}
+
+.card button {
+  padding: 0.4rem 0.8rem;
+  font-size: 0.9rem;
+  background-color: #e2b785;
+  color: #3e2f1c;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.card button:hover {
+  background-color: #d3a76a;
+}
+
+/* Floating Vintage Stickers */
+.floating-garlic {
+  position: fixed;
+  bottom: 30px;
+  left: 20px;
+  width: 60px;
+  z-index: 10;
+  animation: float 6s ease-in-out infinite;
+}
+
+.floating-basil {
+  position: fixed;
+  top: 20px;
+  right: 30px;
+  width: 70px;
+  z-index: 10;
+  transform: rotate(-15deg);
+  animation: float 8s ease-in-out infinite;
+}
+
+.sparkle {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  width: 50px;
+  z-index: 10;
+  animation: pulse 2s infinite;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-10px) rotate(2deg);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 0.6;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+}
+
+.welcome-message {
+  margin-top: 3rem;
+  color: #eee;
+  font-size: 1.3rem;
+  text-shadow: 1px 1px 4px #000;
+  text-align: center;
+  animation: fadeIn 1s ease-in;
+}
+
+.welcome-image {
+  margin-top: 1rem;
+  max-width: 300px;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(255, 255, 255, 0.2);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.floating-sticker {
+  position: fixed;
+  width: 60px;
+  z-index: 2;
+  opacity: 0.8;
+  animation: float 6s ease-in-out infinite;
+}
+
+.top-left {
+  top: 20px;
+  left: 30px;
+}
+.top-right {
+  top: 20px;
+  right: 30px;
+}
+.bottom-left {
+  bottom: 30px;
+  left: 30px;
+}
+.bottom-right {
+  bottom: 30px;
+  right: 30px;
+}
+.center-right {
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+.welcome-image {
+  margin-top: 1rem;
+  max-width: 200px;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+/* ✨ Vintage glow on recipe card */
+.card {
+  background-color: rgba(255, 248, 230, 0.95);
+  border: 1px solid #d6b37d;
+  border-radius: 16px;
+  box-shadow: 0 4px 6px rgba(97, 76, 56, 0.25);
+  padding: 1rem;
+  width: 250px;
+  transition: all 0.35s ease;
+  font-family: 'Georgia', serif;
+  position: relative;
+}
+
+.card:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 8px 16px rgba(146, 103, 69, 0.5);
+  border-color: #b17a4b;
+  cursor: pointer;
+}
+
+/* 🍲 Suggested Recipes Title */
+.suggested-title {
+  margin-top: 3rem;
+  font-size: 1.8rem;
+  font-family: 'Playfair Display', serif;
+  color: #5b3e1d;
+  text-shadow: 1px 1px #f5e1c1;
+}
+.title-with-sticker {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.title-sticker {
+  width: 60px;
+  height: auto;
+}
+.title-with-sticker {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 1rem;
+}
+
+.title-sticker {
+  width: 60px;
+  height: auto;
+}
+
+.sparkle-right {
+  animation: pulse 2s infinite;
+  opacity: 0.9;
+}
+.auth-box {
+  width: 350px;
+  margin: 80px auto;
+  padding: 30px 25px;
+  background-color: rgba(255, 255, 255, 0.95);
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.auth-box h2 {
+  margin-bottom: 20px;
+}
+
+.auth-box input {
+  width: 100%;
+  margin: 10px 0;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.auth-box button {
+  width: 100%;
+  padding: 10px;
+  background-color: #6b4c35;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.auth-box button:hover {
+  background-color: #5a3f2c;
+}
+
+.auth-box p {
+  margin-top: 15px;
+  font-size: 0.9rem;
+}
+/* Header layout fix */
+.header {
+  display: flex;
+  justify-content: center; /* center content horizontally */
+  align-items: center;
+  position: relative;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.logout-btn {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 8px 16px;
+  background-color: #6b4c35;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.logout-btn:hover {
+  background-color: #5a3f2c;
+}
+.back-btn {
+  margin: 20px;
+  padding: 10px 18px;
+  background-color: #6b4c35;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.back-btn:hover {
+  background-color: #5a3f2c;
+}
+.recipe-details {
+  max-width: 800px;
+  margin: 40px auto;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  font-family: 'Georgia', serif;
+  line-height: 1.6;
+}
+/* 🌟 Floating Back Button */
+.floating-back-btn {
+  position: fixed;
+  top: 30px;
+  left: 30px;
+  padding: 10px 16px;
+  background-color: #6b4c35;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  z-index: 1000;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.floating-back-btn:hover {
+  background-color: #5a3f2c;
+}
+
+/* 🔄 Spinner while loading */
+.spinner {
+  margin: 100px auto;
+  border: 6px solid #f3f3f3;
+  border-top: 6px solid #6b4c35;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+.header.with-back {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  gap: 20px; /* spacing between BackButton and title */
+}
+.recipe-full-img {
+  width: 100%;
+  border-radius: 12px;
+  display: block;
+  margin: 0 auto;
+}
